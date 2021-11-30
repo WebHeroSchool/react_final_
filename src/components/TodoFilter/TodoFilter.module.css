@@ -1,0 +1,45 @@
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.button_group {
+  display: flex;
+  justify-content: space-between;
+  font: normal normal 12px/14px Roboto;
+  text-align: center;
+}
+
+.button {
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 16px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #e6f1ff;
+  border-radius: 23px;
+}
+
+.items_count {
+  color: #356eff;
+  margin-left: 3px;
+  font: normal normal 12px/14px Roboto;
+}
+
+.selected {
+  background: #356eff;
+  border-radius: 23px;
+  color: #fff;
+}
+
+.selected:hover {
+  background: #356eff;
+}
+
+.selected .items_count {
+  color: #fff;
+}
