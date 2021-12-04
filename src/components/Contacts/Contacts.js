@@ -18,30 +18,29 @@ const Contacts = () => (
       <a
         href='https://github.com/Lesenok2807'
         target='_blank'
-        rel='noopener noreferrer'
-      >
-        <div className={styles.github}></div>
+        rel='noopener noreferrer'>
+      <img className={styles.github} alt='' />
       </a>
       <a
         href='https://vk.com/id40188189'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <div className={styles.vkontakte}></div>
+        <img className={styles.vkontakte} alt='' />
       </a>
       <a
         href='https://www.instagram.com/damon_musk/'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <div className={styles.instagram}></div>
+        <img className={styles.instagram} alt='' />
       </a>
       <a
         href='https://www.facebook.com/damon.musk'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <div className={styles.facebook}></div>
+        <img className={styles.facebook} alt='' />
       </a>
     </div>
   </div>

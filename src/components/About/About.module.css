@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: inherit;
+  width: 700px;
 }
 
 .preloader {
   background: url('./img/spinner-1s-200px.gif');
   background-size: contain;
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin: auto;
 }
 
 .title {
-  font: normal bold 16px/100% helvetic;
+  font: normal bold 16px/100% 'Roboto';
   margin: 0 0 72px 0;
 }
 
@@ -28,7 +28,7 @@
 
 .user {
   display: flex;
-  justify-content: space-around;
+  justify-content: 'Roboto', space-around;
 }
 
 .info_about_user {
@@ -41,13 +41,13 @@
 .bio {
   color: #999;
   margin-bottom: 14px;
-  font: normal normal 12px/115% helvetic;
+  font: normal normal 12px/115% 'Roboto';
 }
 
 .email,
 .phone {
   color: #999;
-  font: normal normal  12px/100% helvetic;
+  font: normal normal  12px/100% 'Roboto';
 }
 
 .email {
@@ -56,7 +56,7 @@
 
 .name {
   margin: 0 0 12px 0;
-  font: normal bold 28px/100% Roboto;
+  font: normal bold 28px/100% 'Roboto';
 }
 
 .repo_card {
@@ -104,11 +104,119 @@
 
 .error_message {
   margin: 0 0 8px 0;
-  font: normal normal 18px/21px helvetic;
+  font: normal normal 18px/21px 'Roboto';
 }
 
 .message_try_again {
   color: #999;
   margin: 0 0 20px 0;
-  font: normal normal 14px/16px helvetic;
+  font: normal normal 14px/16px 'Roboto';
+}
+
+@media (min-width: 410px) and (max-width: 767px) {
+
+  .wrap {
+    max-width: 640px;
+    min-width: 360px;
+  }
+
+  .name {
+    font: normal bold 20px/100% 'Roboto';
+  }
+
+  .user_card {
+    max-width: 640px;
+    min-width: 360px;
+  }
+
+  .user_avatar {
+    margin-right: 25px;
+    height: 120px;
+    width: auto;
+  }
+
+  .repo_card {
+    max-width: 640px;
+    min-width: 360px;
+    max-height: 425px;
+    padding: 20px 25px 22px 25px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+
+  .wrap {
+    background-size: 60px;
+    max-width: 390px;
+    min-width: 310px;
+    height: auto;
+    margin: auto;
+  }
+
+  .user_card {
+    max-width: 390px;
+    min-width: 310px;
+  }
+
+  .repo_card {
+    max-width: 390px;
+    min-width: 310px;
+  }
+
+  .repo_card {
+    padding: 10px;
+  }
+
+  .name {
+    margin-bottom: 5px;
+    font: normal bold 18px/100% 'Roboto';
+  }
+
+  .user_avatar {
+    margin-right: 10px;
+    height: 100px;
+    width: auto;
+  }
+
+  .bio {
+   margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .wrap {
+    background-size: 60px;
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+
+  .user_card {
+    width: 300px;
+  }
+
+  .repo_card {
+    width: 300px;
+    font-size: 10px/12px;
+  }
+
+  .repo_card {
+    padding: 10px;
+  }
+
+  .name {
+    margin-bottom: 5px;
+    font: normal bold 18px/100% 'Roboto';
+  }
+
+  .user_avatar {
+    margin-right: 10px;
+    height: 100px;
+    width: auto;
+  }
+
+  .bio {
+   margin-bottom: 5px;
+  }
 }

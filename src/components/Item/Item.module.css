@@ -92,3 +92,24 @@
   height: 16px;
   width: 16px;
 }
+
+@media (min-width: 410px) and (max-width: 767px) {
+
+  .checkbox_label {
+    width: 89%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+
+  .checkbox_label {
+    width: 79%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .checkbox_label {
+    width: 70%;
+  }
+}

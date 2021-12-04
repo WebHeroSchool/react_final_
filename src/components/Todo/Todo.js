@@ -19,14 +19,9 @@ class Todo extends React.Component {
         value: 'Написать приложение React',
         isDone: false,
         id: 1
-      },
-      {
-        value: 'Сходить в бассейн',
-        isDone: false,
-        id: 2
       }
     ],
-    count: 2,
+    count: 1,
     isEmpty: false,
     isExist: false,
     isEditing: false,

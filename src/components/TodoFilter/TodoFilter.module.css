@@ -43,3 +43,53 @@
 .selected .items_count {
   color: #fff;
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+  .wrap {
+    width: 100%;
+  }
+
+  .button_group {
+    display: flex;
+    justify-content: space-around;
+    width: inherit;
+  }
+
+  .button {
+    margin: 0;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+  .wrap {
+    width: 100%;
+  }
+
+  .button_group {
+    display: flex;
+    justify-content: space-around;
+    width: inherit;
+  }
+
+  .button {
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .wrap {
+    width: 100%;
+  }
+
+  .button_group {
+    display: flex;
+    justify-content: space-around;
+    width: inherit;
+  }
+
+  .button {
+    margin: 0;
+  }
+}

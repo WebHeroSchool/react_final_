@@ -79,3 +79,75 @@
 .js_circle:before {
   background: #f1e05a;
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+  .date {
+    margin-right: 0px;
+  }
+
+  .language,
+  .star,
+  .forks {
+    margin-right: 8px;
+  }
+
+  .language {
+    padding-left: 0;
+    width: 62px;
+  }
+
+  .html_circle:before,
+  .css_circle:before,
+  .js_circle:before {
+    display: none;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+
+  .date {
+    margin-right: 0px;
+  }
+
+  .language,
+  .star,
+  .forks {
+    margin-right: 8px;
+  }
+
+  .language {
+    padding-left: 0;
+    width: 62px;
+  }
+
+  .html_circle:before,
+  .css_circle:before,
+  .js_circle:before {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .date {
+    margin-right: 0px;
+  }
+
+  .language,
+  .star,
+  .forks {
+    margin-right: 4px;
+  }
+
+  .language {
+    padding-left: 0;
+    width: 62px;
+  }
+
+  .html_circle:before,
+  .css_circle:before,
+  .js_circle:before {
+    display: none;
+  }
+}

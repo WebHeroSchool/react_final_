@@ -43,3 +43,37 @@
   border: 1px solid #356eff;
   background: #356eff;
 }
+
+@media (min-width: 410px) and (max-width: 767px) {
+
+  .repo_list {
+    padding: 0;
+  }
+
+  .buttons_wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+
+  .repo_list {
+    padding: 0;
+  }
+
+  .repo_name_wrap {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .repo_list {
+    padding: 0;
+  }
+
+  .repo_name_wrap {
+    padding: 6px;
+  }
+}

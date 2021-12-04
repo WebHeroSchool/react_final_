@@ -6,7 +6,7 @@ const RepoList = ({ repoList, infoAboutUser, onClickNext, onClickBack, firstRepo
 
 return(
   <div className={styles.wrap}>
-    {repoList.length < 6 ?
+    {repoList.length < 5 ?
       <ol className={styles.repo_list}>
         {repoList.map(repo => (
           <li key={repo.id} className={styles.repo_name_wrap}>
@@ -40,14 +40,14 @@ return(
           <button
             className={styles.button}
             onClick={()=>onClickBack()}
-            disabled={firstRepo < 5}
+            disabled={firstRepo < 1}
           >
             Назад
           </button>
           <button
             className={styles.button}
             onClick={()=>onClickNext()}
-            disabled={repoList.length - lastRepo <= 0}
+            disabled={repoList.length < lastRepo}
           >
             Далее
           </button>

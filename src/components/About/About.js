@@ -18,7 +18,7 @@ class About extends React.Component {
     infoAboutUser: [],
     isError: false,
     firstRepo: 0,
-    lastRepo: 5
+    lastRepo: 4
   }
 
   componentDidMount() {
@@ -57,15 +57,15 @@ class About extends React.Component {
 
   onClickNext = () => {
     this.setState({
-      firstRepo: this.state.firstRepo + 5,
-      lastRepo: this.state.lastRepo + 5
+      firstRepo: this.state.firstRepo + 4,
+      lastRepo: this.state.lastRepo + 4
     });
   };
 
   onClickBack = () => {
     this.setState({
-      firstRepo: this.state.firstRepo - 5,
-      lastRepo: this.state.lastRepo - 5
+      firstRepo: this.state.firstRepo - 4,
+      lastRepo: this.state.lastRepo - 4
     });
   };
 

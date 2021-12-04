@@ -31,3 +31,54 @@
   margin: 0;
   font: normal normal 14px/16px Roboto;
 }
+
+@media (min-width: 410px) and (max-width: 767px) {
+
+  .item_list {
+    max-height: 300px;
+    padding-left: 20px;
+  }
+
+  .empty_list {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 409px) {
+
+  .item_list {
+    max-height: 300px;
+    padding-left: 0px;
+  }
+
+  .empty_list {
+    margin-top: 30px;
+  }
+
+  .no_deals_message {
+    font: normal normal 15px/21px Roboto;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .item_list {
+    max-height: 200px;
+    padding-left: 0px;
+  }
+
+  .empty_list {
+    margin-top: 0;
+  }
+
+  .no_deals_picture {
+    background-size: contain;
+    height: 130px;
+    width: 233px;
+  }
+
+  .no_deals_message {
+    font: normal normal 15px/21px Roboto;
+    text-align: center;
+  }
+}
