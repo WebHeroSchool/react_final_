@@ -16,7 +16,7 @@
 
 .email_link:hover {
   cursor: pointer;
-  opacity: 0.7;
+  color: #356eff;
 }
 
 .phone_link {
@@ -30,15 +30,14 @@
   text-decoration: none;
 }
 
-
 .phone_link:hover {
   cursor: pointer;
-  opacity: 0.7;
+  color: #356eff;
 }
 
 .email_link:before {
   content: '';
-  background: url('./img/email_icon.svg') no-repeat;
+  background: url('./img/mail.svg') no-repeat;
   background-size: cover;
   position: absolute;
   height: 16px;
@@ -47,15 +46,27 @@
   left: 0;
 }
 
+.email_link:hover::before {
+  content: '';
+  background: url('./img/mail_active.svg') no-repeat;
+  background-size: cover;
+}
+
 .phone_link:before {
   content: '';
-  background: url('./img/telegram_icon.svg') no-repeat;
+  background: url('./img/telegram.svg') no-repeat;
   background-size: cover;
   position: absolute;
   height: 16px;
   width: 16px;
   top: 0;
   left: 0;
+}
+
+.phone_link:hover::before {
+  content: '';
+  background: url('./img/telegram_active.svg') no-repeat;
+  background-size: cover;
 }
 
 .social_networks {
@@ -64,54 +75,57 @@
 }
 
 .github {
-  background: url('./img/github_icon.svg') no-repeat;
-  background-size: cover;
+  background: url('./img/github.svg') no-repeat;
   margin-right: 8px;
   height: 24px;
   width: 24px;
+  position: relative;
+  transition: .3s linear;
 }
 
-.vkontakte {
-  background: url('./img/vkontacte_icon.svg') no-repeat;
-  background-size: cover;
+.vk {
+  background: url('./img/vk.svg') no-repeat;
   margin-right: 8px;
   height: 24px;
   width: 24px;
+  position: relative;
+  transition: .3s linear;
 }
 
 .instagram {
-  background: url('./img/instagram_icon.svg') no-repeat;
-  background-size: cover;
+  background: url('./img/instagram.svg') no-repeat;
   margin-right: 8px;
   height: 24px;
   width: 24px;
+  position: relative;
+  transition: .3s linear;
 }
 
 .facebook {
-  background: url('./img/facebook_icon.svg') no-repeat;
-  background-size: cover;
-  height: 24px;
+  background: url('./img/facebook.svg') no-repeat;  height: 24px;
   width: 24px;
+  position: relative;
+  transition: .3s linear;
 }
 
 .github:hover {
-  cursor: pointer;
-  opacity: 0.7;
+  -webkit-transform: scale(1.2);
+ transform: scale(1.2);
 }
 
-.vkontakte:hover {
-  cursor: pointer;
-  opacity: 0.7;
+.vk:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .instagram:hover {
-  cursor: pointer;
-  opacity: 0.7;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .facebook:hover {
-  cursor: pointer;
-  opacity: 0.7;
+  -webkit-transform: scale(1.2);
+ transform: scale(1.2);
 }
 
 @media (min-width: 321px) and (max-width: 409px) {

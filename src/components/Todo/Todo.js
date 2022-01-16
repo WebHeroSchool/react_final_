@@ -13,15 +13,9 @@ const sortingItemsTitle = {
 
 class Todo extends React.Component {
   state = {
-    items:
-      JSON.parse(localStorage.getItem('editedDealList')) || [
-      {
-        value: 'Написать приложение React',
-        isDone: false,
-        id: 1
-      }
-    ],
-    count: 1,
+    items: JSON.parse(localStorage.getItem('editedDealList') ||
+    '[{"value": "Написать приложение"", "isDone": false, "id": 1}, {"value": "Устроиться на работу", "isDone": false, "id": 2}]'),
+    count: 2,
     isEmpty: false,
     isExist: false,
     isEditing: false,
@@ -47,32 +41,34 @@ class Todo extends React.Component {
   onClickDelete = id => {
     const newItemList = this.state.items.filter(item => item.id !== id);
     this.setState({ items: newItemList });
+    this.setState((count) => count - 1);
   };
 
   onClickAdd = value => {
-    if (value !== '' & !this.state.items.some(item=> item.value.toLowerCase() === value.toLowerCase())) {
-      this.setState(state => ({
-        items: [
-          ...state.items,
+    const item = this.state.items.filter(item => item.value === value);
+    if (item.length === 0) {
+        this.setState(state => ({
+          items: [
+            ...state.items,
+            {
+              value,
+              isDone: false,
+              id: state.count + 1
+            }
+          ],
+          count: state.count + 1,
+          isEmpty: false,
+          isExist: false
+        }));
+      } else {
+        this.setState(state => (
           {
-            value,
-            isDone: false,
-            id: state.count + 1
+            isEmpty: value === '',
+            isExist: value !== ''
           }
-        ],
-        count: state.count + 1,
-        isEmpty: false,
-        isExist: false
-      }));
-    } else {
-      this.setState(state => (
-        {
-          isEmpty: value === '',
-          isExist: value !== ''
-        }
-      ));
+        ));
+      };
     };
-  };
 
   onClickRedact = (id, isDone)=> {
     if(!isDone) {
@@ -94,7 +90,7 @@ class Todo extends React.Component {
 
     setTimeout(() => {
       this.setState(state =>({ items: newItemList, isEditing: false }));
-    }, 500);
+    }, 200);
     document.getElementById(id).contentEditable = false;
   };
 

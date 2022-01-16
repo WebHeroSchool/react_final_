@@ -44,6 +44,17 @@
   background: #356eff;
 }
 
+.disabled {
+  opacity: .6;
+}
+
+.disabled:hover {
+  background: none;
+  border: 1px solid #999;
+  color: #356eff;
+  cursor: default;
+}
+
 @media (min-width: 410px) and (max-width: 767px) {
 
   .repo_list {

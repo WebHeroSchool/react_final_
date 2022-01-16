@@ -12,17 +12,18 @@ const ItemList = ({ sorting, sortingValue, onClickDone, onClickDelete, onClickRe
         <p className={styles.do_it_message}>Сделайте это прямо сейчас!</p>
       </div> :
       <ul className={styles.item_list}>
-        {sorting.map(item => <li key={item.id}>
+        {sorting.map(item =>
           <Item
             value={item.value}
             isDone={item.isDone}
             id={item.id}
+            key={item.id}
             onClickDone={onClickDone}
             onClickDelete={onClickDelete}
             onClickRedact={onClickRedact}
             onChangeItem={onChangeItem}
           />
-        </li>)}
+        )}
       </ul>
     }
   </div>

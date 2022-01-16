@@ -31,7 +31,7 @@ class InputItem extends React.Component {
             placeholder='Просто введите сюда название дела...'
             className={styles.input_field}
             value={this.state.inputValue}
-            onChange={event => this.setState({inputValue: event.target.value})}
+            onChange={event => this.setState({ inputValue: event.target.value })}
           />
         </div>
         <div className={styles.button} onClick={this.onButtonClick}></div>

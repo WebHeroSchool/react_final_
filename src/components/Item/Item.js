@@ -23,10 +23,10 @@ class Item extends React.Component {
         <label
           htmlFor='checkbox'
           className={styles.checkbox_label}
-          onClick={() => onClickDone(id)}
+          onClick={() => onClickDone(id)}          
         >
           <div
-            id= {id}
+            id={id}
             className={classnames({
               [styles.item_text]:true,
               [styles.item_done]: isDone

@@ -1,46 +1,42 @@
 import React from 'react';
+import { ReactTitle } from 'react-meta-tags'
 import styles from './Contacts.module.css';
-
-const userContacts = {
-  email: 'ivanova.ov_87@mail.ru',
-  phoneNumber: '+7(925)781-76-97'
-};
 
 const Contacts = () => (
   <div className={styles.wrap}>
     <a href='mailto:ivanova.ov_87@mail.ru' className={styles.email_link}>
-      { userContacts.email }
+      ivanova.ov_87@mail.ru
     </a>
     <a href='tg://resolve?domain=ivanova_2807' className={styles.phone_link}>
-      { userContacts.phoneNumber }
+      +7(925)781-76-97
     </a>
     <div className={styles.social_networks}>
       <a
         href='https://github.com/Lesenok2807'
         target='_blank'
         rel='noopener noreferrer'>
-      <img className={styles.github} alt='' />
+      <div className={styles.github} name='github' content=''></div>
       </a>
       <a
         href='https://vk.com/id40188189'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img className={styles.vkontakte} alt='' />
+        <div className={styles.vk} alt='vk' ></div>
       </a>
       <a
         href='https://www.instagram.com/damon_musk/'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img className={styles.instagram} alt='' />
+        <div className={styles.instagram} alt='instagram'></div>
       </a>
       <a
         href='https://www.facebook.com/damon.musk'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img className={styles.facebook} alt='' />
+        <div className={styles.facebook} alt='facebook'></div>
       </a>
     </div>
   </div>

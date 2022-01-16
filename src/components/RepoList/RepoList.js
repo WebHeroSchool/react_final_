@@ -1,15 +1,16 @@
 import React from 'react';
 import Repository from '../Repository/Repository'
 import styles from './RepoList.module.css';
+import classnames from 'classnames';
 
-const RepoList = ({ repoList, infoAboutUser, onClickNext, onClickBack, firstRepo, lastRepo }) => {
+const RepoList = ({ repoList, onClickNext, onClickBack, firstRepo, lastRepo }) => {
 
 return(
   <div className={styles.wrap}>
-    {repoList.length < 5 ?
+    {repoList.length < 4 ?
       <ol className={styles.repo_list}>
         {repoList.map(repo => (
-          <li key={repo.id} className={styles.repo_name_wrap}>
+          <ul key={repo.id} className={styles.repo_name_wrap}>
             <Repository
               url={repo.svn_url}
               name={repo.name}
@@ -18,13 +19,13 @@ return(
               forks_count={repo.forks_count}
               updated_at={repo.updated_at}
             />
-          </li>
+          </ul>
         ))}
       </ol> :
       <div>
         <ol className={styles.repo_list}>
           {repoList.slice(firstRepo, lastRepo).map(repo => (
-            <li key={repo.id} className={styles.repo_name_wrap}>
+            <ul key={repo.id} className={styles.repo_name_wrap}>
               <Repository
                 url={repo.svn_url}
                 name={repo.name}
@@ -33,21 +34,27 @@ return(
                 forks_count={repo.forks_count}
                 updated_at={repo.updated_at}
               />
-            </li>
+            </ul>
           ))}
         </ol>
         <div className={styles.buttons_wrap}>
           <button
-            className={styles.button}
-            onClick={()=>onClickBack()}
-            disabled={firstRepo < 1}
+            className={classnames({
+              [styles.button]: true,
+              [styles.disabled]: firstRepo === 0
+            })}
+            onClick={() => onClickBack()}
+            disabled={firstRepo === 0}
           >
             Назад
           </button>
           <button
-            className={styles.button}
-            onClick={()=>onClickNext()}
-            disabled={repoList.length < lastRepo}
+            className={classnames({
+              [styles.button]: true,
+              [styles.disabled]: repoList.length - lastRepo <= 0
+            })}
+            onClick={() => onClickNext()}
+            disabled={repoList.length - lastRepo <= 0}
           >
             Далее
           </button>

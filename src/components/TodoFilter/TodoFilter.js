@@ -5,6 +5,7 @@ import classnames from 'classnames';
 const TodoFilter = ({ items, onClickSort, sorting }) => {
   const completedItemsCount = items.filter(item => item.isDone).length;
   const notCompletedItemsCount = items.filter(item => !item.isDone).length;
+  const allItemsCount = items.length;
 
   return (
     <div className={styles.wrap}>
@@ -41,6 +42,9 @@ const TodoFilter = ({ items, onClickSort, sorting }) => {
           onClick={()=>onClickSort('Все')}
         >
           Все
+          <span className={styles.items_count}>
+            {allItemsCount}
+          </span>
         </button>
       </div>
     </div>

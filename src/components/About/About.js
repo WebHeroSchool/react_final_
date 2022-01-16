@@ -18,7 +18,7 @@ class About extends React.Component {
     infoAboutUser: [],
     isError: false,
     firstRepo: 0,
-    lastRepo: 4
+    lastRepo: 5
   }
 
   componentDidMount() {
@@ -31,7 +31,7 @@ class About extends React.Component {
         isLoading: false
       });
     })
-    .catch(err => {
+    .catch(() => {
       this.setState({
         isLoading: false,
         isError: true
@@ -47,7 +47,7 @@ class About extends React.Component {
         isLoading: false
       });
     })
-    .catch(err => {
+    .catch(() => {
       this.setState({
         isLoading: false,
         isError: true
@@ -70,7 +70,7 @@ class About extends React.Component {
   };
 
   render() {
-   const { isLoading, repoList, isError, infoAboutUser } = this.state;
+   const { isLoading, repoList, isError, infoAboutUser, onClickBack, onClickNext } = this.state;
 
    return(
      <div className={styles.wrap}>
